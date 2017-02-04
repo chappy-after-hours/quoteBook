@@ -6,11 +6,19 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller = "mainCtrl">
-    <input type="text" placeholder="Quote" ng-model="newQuoteText"><input type="text" placeholder="Author" ng-model="newQuoteAuthor"><br/>
-    <button type="button" name="button" ng-click="addQuote()">Add Quote</button>
+    Add a New Quote <br/>
+    <form class="form" ng-submit="addQuote()">
+      <input type="text" placeholder="Quote" ng-model="newQuoteText"/>
+      <input type="text" placeholder="Author" ng-model="newQuoteAuthor"/><br/>
+      <input type="submit"/>
+
+    </form>
+
+    <!-- <button type="button" name="button" ng-click="addQuote()">Add Quote</button> -->
     <br/>
     <br/>
     <div class="filter">
+      Filer:
       <input type="text" placeholder="Filter by Quote" ng-model="filterText.text">
       <input type="text" placeholder="Filter by Author" ng-model="filterText.author">
     </div>
