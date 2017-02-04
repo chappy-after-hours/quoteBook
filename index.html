@@ -23,7 +23,7 @@
       <input type="text" placeholder="Filter by Author" ng-model="filterText.author">
     </div>
     <br/>
-    <div class="quotes" ng-repeat="quote in quotations | filter: filterText">
+    <div class="quotes" ng-repeat="quote in quotations track by $index | filter: filterText">
       <h3>{{quote.text}}</h3>
       <p>- {{quote.author}}<p>
       <button ng-click="removeQuote(quote.text)">Remove Quote</button>
